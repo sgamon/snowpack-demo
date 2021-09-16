@@ -25,7 +25,8 @@ module.exports = {
     '**/node_modules/**',
   ],
   alias: {
-    "hello-world-element": "./components/hello-world-element.js",
-    "helloWorldConsole": "./hello-world.js",
+    "hello-world-element": "./components/hello-world-element",
+    "helloWorldConsole": "./modules/hello-world",
+    "helloFromTypescript": "./modules/hello-from-typescript",
   },
 };

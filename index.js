@@ -2,6 +2,9 @@
 import {helloWorldConsole} from 'helloWorldConsole'
 helloWorldConsole()
 
+import {helloFromTypescript} from 'helloFromTypescript'
+helloFromTypescript()
+
 import confetti from 'canvas-confetti'
 confetti.create(document.getElementById('canvas'), {
   resize: true,
