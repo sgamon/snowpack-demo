@@ -1,0 +1,21 @@
+{
+  "name": "snowpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "license": "npx isc-license > LICENSE.md",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Gamon",
+  "license": "ISC",
+  "devDependencies": {
+    "lit-element": "^2.5.1",
+    "snowpack": "^3.8.8"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.4.0"
+  }
+}
