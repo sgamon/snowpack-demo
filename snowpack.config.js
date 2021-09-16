@@ -4,7 +4,7 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    /* ... */
+    app: '/',
   },
   plugins: [
     /* ... */
@@ -25,8 +25,8 @@ module.exports = {
     '**/node_modules/**',
   ],
   alias: {
-    "hello-world-element": "./components/hello-world-element",
-    "helloWorldConsole": "./modules/hello-world",
-    "helloFromTypescript": "./modules/hello-from-typescript",
+    "hello-world-element": "./app/components/hello-world-element",
+    "helloWorldConsole": "./app/modules/hello-world",
+    "helloFromTypescript": "./app/modules/hello-from-typescript",
   },
 };
