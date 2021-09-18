@@ -3,30 +3,23 @@
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
-  mount: {
-    app: '/',
+  "mount": {
+    "app": "/"
   },
-  plugins: [
-    /* ... */
+  "plugins": [],
+  "packageOptions": {},
+  "devOptions": {},
+  "buildOptions": {},
+  "exclude": [
+    "**/.idea/**",
+    "**/package-lock.json",
+    "**/package.json",
+    "**/node_modules/**",
+    "**/snowpack.config.js/**"
   ],
-  packageOptions: {
-    /* ... */
-  },
-  devOptions: {
-    /* ... */
-  },
-  buildOptions: {
-    /* ... */
-  },
-  exclude: [
-    '**/.idea/**',
-    '**/package-lock.json',
-    '**/package.json',
-    '**/node_modules/**',
-  ],
-  alias: {
+  "alias": {
     "hello-world-element": "./app/components/hello-world-element",
     "helloWorldConsole": "./app/modules/hello-world",
     "helloFromTypescript": "./app/modules/hello-from-typescript",
-  },
-};
+  }
+}
