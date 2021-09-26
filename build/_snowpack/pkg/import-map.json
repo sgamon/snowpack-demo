@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "canvas-confetti": "./canvas-confetti.js",
+    "lit-element": "./lit-element.js"
+  }
+}
