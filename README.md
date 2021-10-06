@@ -1,5 +1,86 @@
 # snowpack-demo
+
 Sample Snowpack project
+
+Snowpack is a toolchain that supports _unbundled development_. Google that for 
+more info. 
+
+In a nutshell, unbundled web apps rely on in-browser support for 
+ES Modules instead of running a bundler like Webpack. The problem, currently, 
+is that the web developer community relies on NPM modules - and they don't load
+easily from their landing place in the `node_modules` folder. _Import Maps_ 
+help with that, but leave the developer to discover and map the files.
+
+> The sole purpose behind designing Snowpack 1.0 was very simple — _install npm
+packages to run directly in the browser_.
+
+- [Snowpack — What is Unbundled Development?](https://medium.com/habilelabs/snowpack-what-is-unbundled-development-8562205d0539)
+
+Snowpack tooling has expanded significantly since v1.0. It now has a build 
+system, with tree shaking, Typescript support, and even bundling if you still
+love that.
+
+## What is this demo?
+
+This is a minimal Snowpack project. It suggests a sensible folder structure.
+Two sample modules are loaded - both print output to the browser console. Also,
+a sample web component, made with Lit Element, is included. Finally, there is
+an animation effect provided by a NPM module.
+
+### /app/index.html
+
+A spare file to host the demo. Loads `index.js` with type `module` to active 
+ES Module support. Also, note the web component, `<hello-world-element>`.
+
+### /app/index.js
+
+This is where all the importing happens. Note the imports do not use paths, but
+instead use bare import specifiers. This is not enabled by import maps, but
+with Snowpack's own alias settings in `snowpack.config.js`.
+
+### /app/modules/*
+
+There is a javascript file, `hello-world.js`, and a typescript file, 
+`hello-from-typescript.ts`. Both print a greeting to the browser console. Note
+that typescript "just works" with no setup or fiddling.
+
+### /app/components/hello-world-element.js
+
+This is a web component, created with Lit Element.
+
+### /snowpack.config.js
+
+Snowpack's config is powerful, complex, and woefully undocumented. But to get 
+you going, the sample config points the dev server to the app folder, excludes
+some obvious stuff from the build folder, and defines aliases - so you can use
+bare imports.
+
+Maintaining alias definitions is a side-chore, so I provided generator scripts
+that create module and component files, and the alias definition at the same
+time.
+
+### /build
+
+When you run Snowpack's build system, it delivers the files to this folder. 
+This is what you would deliver to your production website. For example, if you
+use AWS Amplify, you would zip this folder and deploy it.
+
+### /bin
+
+Helper scripts.
+
+## NPM Commands
+
+### start
+
+Runs Snowpacks dev server, which monitors the `node_modules` folder, and
+reloads the browser on code changes. Beware though - it is easy to crash the
+dev server with code errors. Be prepared to restart it frequently.
+
+### build
+
+This command will pick off NPM modules, transpile typescript, and create a 
+deployable app (aka, site) in the `build` folder.
 
 ## Code Generators
 

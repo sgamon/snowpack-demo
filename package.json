@@ -14,12 +14,12 @@
   "author": "Scott Gamon",
   "license": "ISC",
   "devDependencies": {
-    "lit-element": "^2.5.1",
     "lodash.camelcase": "^4.3.0",
     "lodash.kebabcase": "^4.1.1",
     "snowpack": "^3.8.8"
   },
   "dependencies": {
-    "canvas-confetti": "^1.4.0"
+    "canvas-confetti": "^1.4.0",
+    "lit-element": "^2.5.1"
   }
 }

@@ -1,4 +1,3 @@
-// my-first-snowpack/index.js
 import {helloWorldConsole} from 'helloWorldConsole'
 helloWorldConsole()
 
@@ -12,5 +11,4 @@ confetti.create(document.getElementById('canvas'), {
 })({ particleCount: 200, spread: 10 })
 
 import 'hello-world-element';
-// import './myscript.js'
 
