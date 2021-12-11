@@ -29,8 +29,9 @@ an animation effect provided by a NPM module.
 
 ### /app/index.html
 
-A spare file to host the demo. Loads `index.js` with type `module` to active 
-ES Module support. Also, note the web component, `<hello-world-element>`.
+A spare file to host the demo. Loads `index.js` with type `module` to 
+activate ES Module support. Also, note the web component, 
+`<hello-world-element>`.
 
 ### /app/index.js
 

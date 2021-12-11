@@ -12,7 +12,7 @@ let fileName = kebabCase(name)
 config.alias[fileName] = `./app/components/${fileName}`
 
 let componentSource = `
-import {LitElement, html} from 'lit-element';
+import {LitElement, html} from 'lit';
 
 class ${name} extends LitElement {
   render() {

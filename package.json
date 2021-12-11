@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "canvas-confetti": "^1.4.0",
-    "lit-element": "^2.5.1"
+    "lit": "^2.0.2"
   }
 }

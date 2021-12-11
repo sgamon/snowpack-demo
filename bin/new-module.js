@@ -1,15 +1,15 @@
 let fs = require('fs')
 let path = require('path')
-let kebabCase = require('lodash.kebabcase')
 let camelCase = require('lodash.camelcase')
 
 let config = require('../snowpack.config.js')
 
 let [name] = process.argv.slice(2)
-name = camelCase(name)
-let fileName = kebabCase(name)
+// preserve case of fist letter, in case we are naming a class
+let firstLetter = name.charAt(0)
+let fileName = firstLetter + camelCase(name).slice(1)
 
-config.alias[name] = `./app/modules/${kebabCase(name)}`
+config.alias[name] = `./app/modules/${fileName}`
 
 let moduleSource = `
 export function ${name}() {
